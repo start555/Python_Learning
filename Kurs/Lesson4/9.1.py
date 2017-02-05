@@ -21,7 +21,7 @@ def init():
 
 
 if __name__ == "__main__":
-    n = 29
+    n = 9
 
     fibonachi, countFib = init()
     f = fibonachi(n)
