@@ -81,9 +81,8 @@ if enter_command.lower() == 'add':
 # Inf user  - Спросить пароль и выдать информацию о пользователе user, если пароль совпадает с паролем пользователя user.
 elif enter_command.lower() == 'inf user':
     new_inp = input('введите пароль: ')
-    for user in session.query(User).filter(User.password == new_inp):
-        print(user)
-        break
+    if User in session.query(User).filter(User.password == new_inp):
+        print(User)
     else:
         print('Пользователь не найден')
 
